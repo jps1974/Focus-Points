@@ -95,7 +95,7 @@ function PointsRendererFactory.createRenderer(photo)
     DefaultDelegates.focusPointsMap = pointsMap
     DefaultDelegates.focusPointDimen = pointDimen
     DefaultPointRenderer.funcGetAfPoints = NikonDelegates.getAfPoints
-  elseif (string.find(cameraMake, "olympus", 1, true)) then
+  elseif (string.find(cameraMake, "olympus", 1, true) or string.find(cameraMake, "om digital solutions", 1, true)) then
     DefaultDelegates.focusPointsMap = nil     -- unused
     DefaultDelegates.focusPointDimen = nil    -- unused
     DefaultPointRenderer.funcGetAfPoints = OlympusDelegates.getAfPoints
